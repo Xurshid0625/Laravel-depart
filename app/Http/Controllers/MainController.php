@@ -31,4 +31,9 @@ class MainController extends Controller
     {
         return view('blog');
     }
+
+    public function contact()
+    {
+        return view('Contact');
+    }
 }
