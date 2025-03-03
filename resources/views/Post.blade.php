@@ -1,6 +1,6 @@
 <x-head>
     <x-slot:title>
-        Contact
+        Post Yratish
     </x-slot:title>
     <!-- contact section -->
     <section class="contact_section  ">
@@ -8,28 +8,20 @@
             <div class="row">
                 <div class="col-md-7 col-lg-6 ">
                     <div class="form_container">
-                        <div class="heading_container ">
-                            <h2>
-                                Contact Us
-                            </h2>
+                        <div class="heading_container mt-5 ">
+                          Post yaratish
                         </div>
-                        <form action="" method="GET">
+                        <form action="{{ route('posts.store') }}" method="POST">
                             @csrf
                             <div>
-                                <input type="text" name="text" placeholder="Your Name" />
-                            </div>
-                            <div>
-                                <input type="text" name="number" placeholder="Phone Number" />
-                            </div>
-                            <div>
-                                <input type="email" name="email" placeholder="Email" />
+                                <input type="text" name="text" placeholder="title" />
                             </div>
                             <div>
                                 <input type="text" name="message" class="message-box" placeholder="Message" />
                             </div>
                             <div class="btn_box">
-                                <button>
-                                    SEND
+                                <button class="btn btn-primary btn-block py-3 px-5" type="submit">
+                                    Saqlash
                                 </button>
                             </div>
                         </form>

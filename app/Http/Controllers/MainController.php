@@ -32,8 +32,13 @@ class MainController extends Controller
         return view('blog');
     }
 
+    public function post(Request $request)
+    {
+        return view('Post');
+    }
+
     public function contact()
     {
-        return view('Contact');
+        return view('contact');
     }
 }

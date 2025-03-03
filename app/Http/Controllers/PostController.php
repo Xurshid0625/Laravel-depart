@@ -8,43 +8,47 @@ use Illuminate\Routing\Controller;
 
 class PostController extends Controller
 {
-    
+
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::latest()->paginate(9);
+
+        return view('posts.index')->with('posts', $posts);
     }
 
-    
-    public function create()
-    {
-        return view('Post.create');
-    }
 
-   
+    public function create() {}
+
+
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required|string',
+        ]);
+
+        Post::create($request->all());
+
+        return view('Blog');
     }
 
-  
-    public function show(string $id)
-    {
-        //
-    }
 
-   
+    public function show(Request $request) {}
+
+
     public function edit(string $id)
     {
         //
     }
 
-    
+
     public function update(Request $request, string $id)
     {
         //
     }
 
-    
+
     public function destroy(string $id)
     {
         //

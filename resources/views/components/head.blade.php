@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div>
-                    <a href="{{route('contact')}}" class="slider-link">
+                    <a href="{{ route('post')}}" class="slider-link">
                         Post yaratish
                     </a>
                 </div>

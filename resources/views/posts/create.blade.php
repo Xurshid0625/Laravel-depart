@@ -1,6 +1,6 @@
 <x-head>
     <x-slot:title>
-        Post yaratish
+        Contact
     </x-slot:title>
     <!-- contact section -->
     <section class="contact_section  ">
@@ -13,40 +13,25 @@
                                 Contact Us
                             </h2>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('') }}" method="GET">
+                            @csrf
                             <div>
-                                <input type="text" placeholder="Your Name" />
+                                <input type="text" name="text" placeholder="Your Name" />
                             </div>
                             <div>
-                                <input type="text" placeholder="Phone Number" />
+                                <input type="text" name="number" placeholder="Phone Number" />
                             </div>
                             <div>
-                                <input type="email" placeholder="Email" />
+                                <input type="email" name="email" placeholder="Email" />
                             </div>
                             <div>
-                                <input type="text" class="message-box" placeholder="Message" />
+                                <input type="text" name="message" class="message-box" placeholder="Message" />
                             </div>
                             <div class="btn_box">
                                 <button>
                                     SEND
                                 </button>
                             </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-5 col-lg-6">
-                    <div class="subscribe-box">
-                        <h3>
-                            Subscribe To Our Newsletter
-                        </h3>
-                        <p>
-                           
-                        </p>
-                        <form action="">
-                            <input type="email" placeholder="Enter your email">
-                            <button>
-                                Subscribe
-                            </button>
                         </form>
                     </div>
                 </div>

@@ -13,19 +13,13 @@
                                 Contact Us
                             </h2>
                         </div>
-                        <form action="" method="GET">
+                        <form action="{{route('posts.store')}}" method="POST">
                             @csrf
                             <div>
-                                <input type="text" name="text" placeholder="Your Name" />
+                                <input type="text" name="title" placeholder="title" />
                             </div>
                             <div>
-                                <input type="text" name="number" placeholder="Phone Number" />
-                            </div>
-                            <div>
-                                <input type="email" name="email" placeholder="Email" />
-                            </div>
-                            <div>
-                                <input type="text" name="message" class="message-box" placeholder="Message" />
+                                <input type="text" name="Text" placeholder="Text" />
                             </div>
                             <div class="btn_box">
                                 <button>
