@@ -51,8 +51,8 @@
                     </div>
                 </div>
                 <div>
-                    <a href="{{ route('post')}}" class="slider-link">
-                        Post yaratish
+                    <a href="{{ route('post') }}" class="btn btn-primary mr-3 d-none d-lg-block">Post
+                        Yaratish
                     </a>
                 </div>
             </nav>

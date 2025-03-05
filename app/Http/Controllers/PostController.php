@@ -11,30 +11,37 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::latest()->paginate(9);
+        $posts = Post::all();
 
-        return view('posts.index')->with('posts', $posts);
+        return view('index')->with('posts',$posts);
+
     }
 
 
-    public function create() {}
+    public function create()
+    {
+        return view('posts.create')->with([
+            'title',
+            'text'
+        ]);
+    }
 
 
     public function store(Request $request)
     {
-        // dd($request);
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
+        Post::create([
+            'title' => $request->title,
+            'text' => $request->text
         ]);
 
-        Post::create($request->all());
-
-        return view('Blog');
+        return view('posts.index');
     }
 
 
-    public function show(Request $request) {}
+    public function show(Post $posts)
+    {
+      return view('posts.index');
+    }
 
 
     public function edit(string $id)

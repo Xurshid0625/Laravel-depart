@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Authcontroller;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PostController;
@@ -12,6 +13,8 @@ Route::get('service',[MainController::class,'Service'])->name('Service');
 Route::get('blog',[MainController::class,'Blog'])->name('Blog');
 Route::get('post',[MainController::class,'post'])->name('post');
 Route::get('contact',[MainController::class,'contact'])->name('contact');
+Route::post('posts/create',[PostController::class,'create']);
+Route::get('index',[PostController::class,'index'])->name('index');
 
 
 Route::resources([

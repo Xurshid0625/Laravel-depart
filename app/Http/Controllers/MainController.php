@@ -29,12 +29,12 @@ class MainController extends Controller
 
     public function blog()
     {
-        return view('blog');
+        return view('posts.index');
     }
 
-    public function post(Request $request)
+    public function Post(Request $request)
     {
-        return view('Post');
+        return view('posts.create');
     }
 
     public function contact()

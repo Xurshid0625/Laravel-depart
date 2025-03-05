@@ -20,10 +20,10 @@
                             </div>
                             <div class="detail-box">
                                 <h5>
-                                    {{$post->title}}
+                                    {{ $post->title }}
                                 </h5>
                                 <p>
-                                    {{$post->text}}
+                                    {{ $post->text }}
                                 </p>
                                 <a href="">
                                     Read More
